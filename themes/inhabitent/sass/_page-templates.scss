@@ -9,7 +9,7 @@
 /* Content area */
 .site-content {
 	width: 1120px;
-	display: flex ;
+	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
 	.content-area {
@@ -117,10 +117,13 @@
 	}
 	ul {
 		display: flex;
+		text-transform: uppercase;
 	}
-	.page_item {
-		padding-left: $base__space-unit;
-	}
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
 }
 
 /* Footer */
@@ -138,17 +141,14 @@
 	}
 	.site-info {
 	height: 285px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 		.info-wrapper {
+			width: 1120px;
 			display: flex;
-    		width: 500px;
-    		justify-content: space-around;
+    		margin: 0 auto;
 		}
 		.contact-info {
-			display: flex;
-			flex-direction: column;
+			width: 25%;
+			margin: 3rem 0;
 			h2 {
 				margin-bottom: 0.4rem;
 			}
@@ -159,14 +159,27 @@
 				margin-top: 1rem;
 			}
 		}
-		img {
-			width: 20%;
+		.business-hours {
+			width: 25%;
+			margin: 3rem 0;
+			span {
+				font-weight: bold;
+			}
+		}
+		.footer-logo {
+			width: 50%;
+			margin: 4rem 0;
+			img {
+				width: 50%;
+				margin-left: 16rem;
+			}
 		}
 	}
 	.copyright {
 		text-align: center;
 		margin: 0;
 		padding: 1rem 0;
+		text-transform: uppercase;
 	}
 	.fa {
 		min-width: 1.5rem;

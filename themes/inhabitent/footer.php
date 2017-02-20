@@ -24,12 +24,15 @@
 					</div>
 					<div class="business-hours">
 						<h3>Business Hours</h3>
-						<p>Monday-Friday: 9am to 5pm</p>
-						<p>Saturday: 10am to 2pm</p>
-						<p>Sunday: Closed</p>
+						<p><span>Monday-Friday:</span> 9am to 5pm</p>
+						<p><span>Saturday:</span> 10am to 2pm</p>
+						<p><span>Sunday:</span> Closed</p>
 					</div>
+					<div class="footer-logo">
+					<a href="inhabitent/home">
+					<img src="<?php echo get_template_directory_uri() ?>/images/inhabitent-logo-text.svg" alt="Inhabitent Logo"></a>
 					</div>
-					<img src="<?php echo get_template_directory_uri() ?>/images/inhabitent-logo-text.svg" alt="Inhabitent Logo">
+					</div> <!-- info wrapper -->
 				</div><!-- .site-info -->
 				<p class="copyright">Copyright &copy; 2016 Inhabitent</p>
 			</footer><!-- #colophon -->

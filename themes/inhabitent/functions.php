@@ -84,6 +84,7 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  */
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+	wp_enqueue_style('font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0');
 
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
@@ -92,6 +93,30 @@ function red_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+
+/**
+ * Changing login logo to Inhabitent.
+ */
+function login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
+			background-size: 94%; 
+			padding-bottom: 27px;
+			width: 100%;
+			height: 100%;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'login_logo' );
+
+/**
+ * Changing login logo link to Inhabitent Homepage.
+ */
+function login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'login_logo_url' );
 
 /**
  * Custom template tags for this theme.
