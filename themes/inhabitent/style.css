@@ -219,6 +219,10 @@ td,
 th {
   padding: 0; }
 
+/* Normalize */
+.entry-title {
+  margin: 0; }
+
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
@@ -390,23 +394,19 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  background: #248A83;
+  box-shadow: none;
+  color: white;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: .9rem;
   line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: .75rem 1.5rem; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    background: #19625d; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -425,8 +425,8 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: 1px solid #e1e1e1;
+  background-color: #f4f4f4; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -529,6 +529,44 @@ a {
   width: 50%; }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1; }
+
+.header-container {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0 12rem; }
+  .header-container .logo {
+    width: 53px;
+    height: 34px;
+    background-image: url(../../images/inhabitent-logo-tent.svg);
+    background-size: 100%; }
+  .header-container nav {
+    width: 370px; }
+  .header-container ul {
+    display: -ms-flexbox;
+    display: flex;
+    text-transform: uppercase; }
+
+.menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -597,6 +635,43 @@ a {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+/* Sidebar widget styling */
+.widget-area {
+  width: 30%;
+  padding-left: 5%;
+  padding-top: 35px;
+  font-family: 'novecentosanswide_normal'; }
+  .widget-area h2 {
+    text-transform: uppercase;
+    color: #2f1339; }
+  .widget-area .widget_text i {
+    min-width: 1.5rem; }
+  .widget-area .widget_text .widget-location {
+    display: -ms-flexbox;
+    display: flex; }
+
+.widget_archive ul {
+  margin: 0;
+  padding: 0; }
+
+/* Footer widget styling */
+#footer-sidebar {
+  display: block;
+  height: 250px; }
+
+#footer-sidebar1 {
+  float: left;
+  width: 25%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3rem; }
+
+#footer-sidebar2 {
+  float: left;
+  width: 25%;
+  margin-right: 5px;
+  margin-top: 3rem; }
 
 /*--------------------------------------------------------------
 # Content
@@ -697,12 +772,8 @@ object {
   display: block; }
 
 /*--------------------------------------------------------------
-# Page Templates
+# Journal, Find Us template
 --------------------------------------------------------------*/
-/* Normalize */
-.entry-title {
-  margin: 0; }
-
 /* Content area */
 .site-content {
   width: 1120px;
@@ -716,13 +787,14 @@ object {
     padding-right: 5%;
     padding-top: 40px; }
 
-.entry-header {
+/* Journal Page Only */
+.blog .entry-header {
   position: relative;
   color: #FFF; }
-  .entry-header img {
+  .blog .entry-header img {
     height: auto;
     width: 100%; }
-  .entry-header .entry-title {
+  .blog .entry-header .entry-title {
     position: absolute;
     top: 2rem;
     background-color: #248A83;
@@ -730,82 +802,37 @@ object {
     padding: 0 1rem;
     margin-right: 16rem;
     text-transform: uppercase; }
-    .entry-header .entry-title a {
+    .blog .entry-header .entry-title a {
       color: #FFF; }
-      .entry-header .entry-title a:hover {
+      .blog .entry-header .entry-title a:hover {
         color: #f0e4d1; }
-  .entry-header .entry-meta {
+  .blog .entry-header .entry-meta {
     position: absolute;
     bottom: 7px;
     right: 0;
     background-color: #248A83;
     text-transform: uppercase;
     padding: 0 1rem; }
-    .entry-header .entry-meta a {
+    .blog .entry-header .entry-meta a {
       color: #FFF; }
-      .entry-header .entry-meta a:hover {
+      .blog .entry-header .entry-meta a:hover {
         color: #f0e4d1; }
 
-/* Sidebar area */
-.widget-area {
-  width: 30%;
-  padding-left: 5%;
-  padding-top: 35px; }
-  .widget-area h2 {
-    text-transform: uppercase; }
+/* About Page Only */
+.wpcf7-form .required {
+  color: #d99054; }
 
-.widget_text i {
-  min-width: 1.5rem; }
-
-.widget_text .widget-location {
-  display: -ms-flexbox;
-  display: flex; }
-
-.widget_archive ul {
-  margin: 0;
-  padding: 0; }
+.page-id-12 .entry-content h2, .page-id-12 .entry-content label {
+  text-transform: uppercase;
+  color: #2f1339; }
 
 /* Front page */
 .site-description {
   display: none; }
 
-/* Header */
-.site-header {
-  width: 100%;
-  height: 3rem;
-  position: fixed;
-  border-bottom: 1px solid #e1e1e1;
-  background: rgba(255, 255, 255, 0.85);
-  z-index: 1; }
-
-.header-container {
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-  margin: 0 12rem; }
-  .header-container .logo {
-    width: 53px;
-    height: 34px;
-    background-image: url(../../images/inhabitent-logo-tent.svg);
-    background-size: 100%; }
-  .header-container nav {
-    width: 370px; }
-  .header-container ul {
-    display: -ms-flexbox;
-    display: flex;
-    text-transform: uppercase; }
-
-.menu {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-
-/* Footer */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 .site-footer {
   background-image: url(../../images/dark-wood.png);
   color: #FFFFFF; }
@@ -823,20 +850,6 @@ object {
       display: -ms-flexbox;
       display: flex;
       margin: 0 auto; }
-    .site-footer .site-info .contact-info {
-      width: 25%;
-      margin: 3rem 0; }
-      .site-footer .site-info .contact-info h2 {
-        margin-bottom: 0.4rem; }
-      .site-footer .site-info .contact-info p {
-        margin-bottom: 0.5rem; }
-      .site-footer .site-info .contact-info .icons {
-        margin-top: 1rem; }
-    .site-footer .site-info .business-hours {
-      width: 25%;
-      margin: 3rem 0; }
-      .site-footer .site-info .business-hours span {
-        font-weight: bold; }
     .site-footer .site-info .footer-logo {
       width: 50%;
       margin: 4rem 0; }

@@ -12,23 +12,21 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<div class="info-wrapper">
-					<div class="contact-info">
-						<h3>Contact Info</h3>
-						<p><a href=""><i class="fa fa-envelope" aria-hidden="true"></i></i>info@inhabitent.com</a></p>
-						<p><a href=""><i class="fa fa-phone fa-lg" aria-hidden="true"></i>778-456-7891</a></p>
-						<p>
-							<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
-							<i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
-							<i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i>
-						</p>
-					</div>
-					<div class="business-hours">
-						<h3>Business Hours</h3>
-						<p><span>Monday-Friday:</span> 9am to 5pm</p>
-						<p><span>Saturday:</span> 10am to 2pm</p>
-						<p><span>Sunday:</span> Closed</p>
-					</div>
-					<div class="footer-logo">
+<div id="footer-sidebar1">
+<?php
+if(is_active_sidebar('footer-sidebar-1')){
+dynamic_sidebar('footer-sidebar-1');
+}
+?>
+</div>
+<div id="footer-sidebar2">
+<?php
+if(is_active_sidebar('footer-sidebar-2')){
+dynamic_sidebar('footer-sidebar-2');
+}
+?>
+</div>
+<div class="footer-logo">
 					<a href="inhabitent/home">
 					<img src="<?php echo get_template_directory_uri() ?>/images/inhabitent-logo-text.svg" alt="Inhabitent Logo"></a>
 					</div>
@@ -37,6 +35,8 @@
 				<p class="copyright">Copyright &copy; 2016 Inhabitent</p>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
+
+		
 
 		<?php wp_footer(); ?>
 		

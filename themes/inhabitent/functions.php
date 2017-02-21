@@ -64,6 +64,24 @@ function red_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+'name' => 'Footer Sidebar 1',
+'id' => 'footer-sidebar-1',
+'description' => 'Appears in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+register_sidebar( array(
+'name' => 'Footer Sidebar 2',
+'id' => 'footer-sidebar-2',
+'description' => 'Appears in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
 }
 add_action( 'widgets_init', 'red_starter_widgets_init' );
 
@@ -93,30 +111,6 @@ function red_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
-
-/**
- * Changing login logo to Inhabitent.
- */
-function login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
-			background-size: 94%; 
-			padding-bottom: 27px;
-			width: 100%;
-			height: 100%;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'login_logo' );
-
-/**
- * Changing login logo link to Inhabitent Homepage.
- */
-function login_logo_url() {
-    return home_url();
-}
-add_filter( 'login_headerurl', 'login_logo_url' );
 
 /**
  * Custom template tags for this theme.
