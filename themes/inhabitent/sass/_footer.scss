@@ -4,10 +4,12 @@
 .site-footer {
 	background-image: url(../../images/dark-wood.png);
 	color: #FFFFFF;
+	font-family: 'merriweather', serif;
 	h3 {
 		color: #d99054;
 		text-transform: uppercase;
 		margin-bottom: 0.75rem;
+		font-family: 'novecentosanswide', sans-serif;
 	}
 	a {
 		color: #FFFFFF;
@@ -18,7 +20,7 @@
 		.info-wrapper {
 			width: 1120px;
 			display: flex;
-    		margin: 0 auto;
+    		margin: 0 auto;}
 		}
 		.footer-logo {
 			width: 50%;
@@ -34,8 +36,9 @@
 		margin: 0;
 		padding: 1rem 0;
 		text-transform: uppercase;
+		font-family: 'novecentosanswide', sans-serif;
 	}
 	.fa {
 		min-width: 1.5rem;
 	}
-}
+

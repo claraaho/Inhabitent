@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# Front Homepage
+--------------------------------------------------------------*/
+.site-description {
+	display: none;
+}
+
+.home .site-header {
+    position: absolute;
+    border-bottom: none;
+    background: none;
+    a, a:visited {
+        color: #FFF;
+    }
+    a:hover {
+        color: #f0e4d1;
+    }
+}
+
+.home .logo {
+    background-image: url(../../images/inhabitent-logo-tent-white.svg);
+}
+
+.home .site-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0;
+    .content-area {
+        width: 1120px;
+        margin: 0 auto;
+        .entry-title {
+            display: none;
+        }
+    }
+}
+
+.newsfeed-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
+
+.latest-wrapper {
+    width: 355px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    img {
+        height: 250px;
+    }
+}
+
+.home-hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100%), url('../../images/home-hero.jpg') top center no-repeat;
+    background-size: cover, cover;
+}  

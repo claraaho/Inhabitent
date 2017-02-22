@@ -7,14 +7,22 @@
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	.content-area {
+	font-family: 'merriweather', serif;
+	h1, h2 {
+		font-family: 'novecentosanswide', sans-serif;
+		text-transform: uppercase;
+		color: #2f1339;
+	}
+}
+
+.blog, .page-id-12 {
+		.content-area {
 		width: 75%;
 		border-right: 1px solid #e1e1e1;
 		padding-right: 5%;
 		padding-top: 40px;
 	}
 }
-
 /* Journal Page Only */
 .blog .entry-header {
 	position: relative;
@@ -62,16 +70,29 @@
 	}
 }
 
-.page-id-12 .entry-content {
-	h2, label {
-		text-transform: uppercase;
-		color: #2f1339;
+/* Shop Page */
+.shop-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.product-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 23%;
+	margin-bottom: 2rem;
+	border: 1px solid #e1e1e1;
+	img {
+		height: 250px;
 	}
 }
 
-
-/* Front page */
-.site-description {
-	display: none;
+.product-content {
+	display: flex;
+	justify-content: space-around;
+	border-top: 5px solid #e1e1e1;
+	p {
+		margin-bottom: 1rem;
+	}
 }
-

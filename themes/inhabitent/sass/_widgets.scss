@@ -21,18 +21,22 @@
 	width: 30%;
 	padding-left: 5%;
 	padding-top: 35px;
-	font-family: 'novecentosanswide_normal';
 	h2 {
 		text-transform: uppercase;
 		color: #2f1339;
 	}
-	.widget_text {
-		i {
-			min-width: 1.5rem;
-		}
-		.widget-location {
-			display: flex;
-		}
+}
+
+.widget_text {
+	i {
+		min-width: 1.5rem;
+	}
+	.widget-location {
+		display: flex;
+	}
+	.days {
+		font-family: 'merriweather', serif;
+		font-weight: bold;
 	}
 }
 
