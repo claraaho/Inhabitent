@@ -28,7 +28,7 @@
     .content-area {
         width: 1120px;
         margin: 0 auto;
-        .entry-title {
+        h1 {
             display: none;
         }
     }
@@ -37,12 +37,11 @@
 .newsfeed-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 }
 
 .latest-wrapper {
     width: 355px;
-    height: 250px;
     margin: 0;
     padding: 0;
     img {

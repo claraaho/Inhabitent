@@ -592,7 +592,7 @@ a {
   .home .site-content .content-area {
     width: 1120px;
     margin: 0 auto; }
-    .home .site-content .content-area .entry-title {
+    .home .site-content .content-area h1 {
       display: none; }
 
 .newsfeed-wrapper {
@@ -600,11 +600,10 @@ a {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-bottom: 7rem; }
+  margin-bottom: 3rem; }
 
 .latest-wrapper {
   width: 355px;
-  height: 250px;
   margin: 0;
   padding: 0; }
   .latest-wrapper img {
@@ -700,14 +699,14 @@ a {
     text-transform: uppercase;
     color: #2f1339; }
 
-.widget_text i {
+.widget i {
   min-width: 1.5rem; }
 
-.widget_text .widget-location {
+.widget .widget-location {
   display: -ms-flexbox;
   display: flex; }
 
-.widget_text .days {
+.widget .days {
   font-family: 'merriweather', serif;
   font-weight: bold; }
 
@@ -916,6 +915,47 @@ object {
   border-top: 5px solid #e1e1e1; }
   .product-content p {
     margin-bottom: 1rem; }
+
+.page-id-9 .site-header {
+  position: absolute;
+  border-bottom: none;
+  background: none; }
+  .page-id-9 .site-header a, .page-id-9 .site-header a:visited {
+    color: #FFF; }
+  .page-id-9 .site-header a:hover {
+    color: #f0e4d1; }
+
+.page-id-9 .logo {
+  background-image: url(../../images/inhabitent-logo-tent-white.svg); }
+
+.page-id-9 .site-content {
+  width: 100%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-top: 0; }
+  .page-id-9 .site-content .content-area {
+    width: 1120px;
+    margin: 0 auto; }
+
+.about-hero-wrapper {
+  position: relative; }
+  .about-hero-wrapper h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 3rem; }
+
+.about-content-wrapper {
+  width: 800px;
+  margin: 3rem auto; }
+  .about-content-wrapper h2 {
+    text-align: center;
+    font-size: 2.1rem; }
+
+.latest-wrapper {
+  border: 1px solid #e1e1e1; }
+  .latest-wrapper .latest-container {
+    border-top: 5px solid #e1e1e1; }
 
 /*--------------------------------------------------------------
 # Footer

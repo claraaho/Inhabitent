@@ -96,3 +96,57 @@
 		margin-bottom: 1rem;
 	}
 }
+
+
+.page-id-9 .site-header {
+    position: absolute;
+    border-bottom: none;
+    background: none;
+    a, a:visited {
+        color: #FFF;
+    }
+    a:hover {
+        color: #f0e4d1;
+    }
+}
+
+.page-id-9 .logo {
+    background-image: url(../../images/inhabitent-logo-tent-white.svg);
+}
+
+.page-id-9 .site-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0;
+    .content-area {
+        width: 1120px;
+        margin: 0 auto;
+    }
+}
+
+.about-hero-wrapper {
+	position: relative;
+	h1 {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		font-size: 3rem;
+	}
+}
+
+.about-content-wrapper {
+	width: 800px;
+	margin: 3rem auto;
+	h2 {
+		text-align: center;
+		font-size: 2.1rem;
+	}
+}
+
+
+.latest-wrapper {	
+	border: 1px solid #e1e1e1;
+	.latest-container {
+		border-top: 5px solid #e1e1e1;
+	}
+}

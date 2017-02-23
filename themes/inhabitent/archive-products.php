@@ -28,7 +28,7 @@ get_header(); ?>
 
 			<div class="product-content">
 				<p><?php the_title(); ?></p>
-				<p>$#</p> 
+				<p><?php echo CFS()->get('price'); ?></p> 
 			</div><!-- .content-wrapper -->
 			</div><!-- .product-wrapper -->
 			<?php endwhile; ?>

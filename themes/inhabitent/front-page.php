@@ -26,13 +26,15 @@ $args = array( 'posts_per_page' => 3, 'order'=> 'DSC', 'orderby' => 'post_date' 
 $postslist = get_posts( $args );
 foreach ( $postslist as $post ) :
   setup_postdata( $post ); ?> 
-	<ul class="latest-wrapper">
+	<div class="latest-wrapper">
         <?php if ( has_post_thumbnail() ) : ?>
-            <li><?php the_post_thumbnail('large'); ?></li>
+            <?php the_post_thumbnail('large'); ?>
         <?php endif; ?>
-		<li><?php the_date(); ?></li>
-		<li><?php the_title(); ?></li>   
-	</ul><!-- .latest-wrapper -->
+        <div class="latest-container">
+		<?php the_date(); ?>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>   
+        </div>
+    </div><!-- .latest-wrapper -->
 <?php
 endforeach; 
 wp_reset_postdata();
