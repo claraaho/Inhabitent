@@ -48,6 +48,27 @@ wp_reset_postdata();
 
    </div>-->
 
+<?php 
+    $items = get_terms( array(
+        'taxonomy' => 'product_type',
+        'orderby' => 'name',
+        'hide_empty' => false
+    ));
+
+    foreach ( $items as $item ):
+    $url = get_term_link($item->slug, 'product_type');
+?>
+     <img src="<?php echo get_template_directory_uri();?>/images/product-type-icons/<?php echo $item->slug; ?>.svg" alt="">
+
+     <p><?php echo $item->description; ?></p>
+
+     <a href='<?php echo $url?>' class="link"><?php echo $item->name; ?></a>
+        
+    <?php endforeach; ?>
+
+
+
+
         </main><!-- #main -->
     </div><!-- #primary -->
 
