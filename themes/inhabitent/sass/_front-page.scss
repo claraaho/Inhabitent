@@ -42,8 +42,12 @@
 
 .latest-wrapper {
     width: 355px;
+    border: 1px solid #e1e1e1;
     margin: 0;
     padding: 0;
+    .product-picture {
+        background: #e1e1e1;
+    }
     img {
         height: 250px;
     }
@@ -57,3 +61,39 @@
     background: linear-gradient(rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100%), url('../../images/home-hero.jpg') top center no-repeat;
     background-size: cover, cover;
 }  
+
+.stuff-container {
+    display: flex;
+    justify-content: space-between;
+    .stuff-wrapper {
+        width: 23%;
+        text-align: center;
+        border: 1px solid #e1e1e1;
+        border-top-width: 5px;
+        padding: 1rem 0;
+        img {
+            width: 28%;
+        }
+        p {
+            padding: 0 0.55rem;
+            line-height: 1.75rem;
+        }
+        a {
+            text-transform: uppercase;
+            font-family: 'novecentosanswide', 'sans-serif';
+            border: 1px solid #248A83;
+            background: #248A83;
+            color: #FFF;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.products-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.newsfeed-container .home-titles {
+    text-align: center;
+}

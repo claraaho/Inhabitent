@@ -32,7 +32,7 @@ dynamic_sidebar('footer-sidebar-2');
 					</div>
 					</div> <!-- info wrapper -->
 				</div><!-- .site-info -->
-				<p class="copyright">Copyright &copy; 2016 Inhabitent</p>
+				<p class="copyright">Copyright &copy; 2017 Inhabitent</p>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

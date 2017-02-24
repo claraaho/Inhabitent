@@ -11,18 +11,22 @@
 	h1, h2 {
 		font-family: 'novecentosanswide', sans-serif;
 		text-transform: uppercase;
+	}
+	h2 {
 		color: #2f1339;
 	}
 }
 
-.blog, .page-id-12 {
+.blog, .page-id-12, .single {
 		.content-area {
-		width: 75%;
+		width: 83%;
 		border-right: 1px solid #e1e1e1;
 		padding-right: 5%;
 		padding-top: 40px;
+		line-height: 1.75rem;
 	}
 }
+
 /* Journal Page Only */
 .blog .entry-header {
 	position: relative;
@@ -36,9 +40,10 @@
 		top: 2rem;
 		background-color: #248A83;
 		font-size: 2rem;
-		padding: 0 1rem;
-		margin-right: 16rem;
+		padding: 1.5rem;
+		margin-right: 14rem;
 		text-transform: uppercase;
+		letter-spacing: 2px;
 		a {
 			color: #FFF;
 			&:hover {
@@ -48,7 +53,58 @@
 	}
 	.entry-meta {
 		position: absolute;
-		bottom: 7px;
+		bottom: 8px;
+		right: 0;
+		background-color: #248A83;
+		text-transform: uppercase;
+		padding: 0 1rem;
+		a {
+			color: #FFF;
+			&:hover {
+			color: #f0e4d1;
+			}
+	      }
+	}
+}
+
+.entry-footer {
+	font-family: 'novecentosanswide', sans-serif;
+	text-transform: uppercase;
+	.cat-links {
+	margin-right: 2rem;
+	}
+}
+
+/* single page */
+.single .entry-header {
+	position: relative;
+	color: #FFF;
+	h1 {
+		color: #FFF;
+	} 
+	img {
+		height: auto;
+		width: 100%;
+	}
+	.entry-title {
+		position: absolute;
+		top: 2rem;
+		background-color: #248A83;
+		font-size: 2rem;
+		padding: 1.5rem;
+		margin-right: 14rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		a {
+			color: #FFF;
+			&:hover {
+				color: #f0e4d1;
+			}
+		}
+	}
+	.entry-meta {
+		position: absolute;
+		bottom: 8px;
 		right: 0;
 		background-color: #248A83;
 		text-transform: uppercase;
@@ -86,12 +142,14 @@
 	img {
 		height: 250px;
 	}
+	a {
+		background-color: #e1e1e1;
+	}
 }
 
 .product-content {
 	display: flex;
 	justify-content: space-around;
-	border-top: 5px solid #e1e1e1;
 	p {
 		margin-bottom: 1rem;
 	}
@@ -143,10 +201,19 @@
 	}
 }
 
+.adventure-container {
+	display: flex;
+}
 
-.latest-wrapper {	
-	border: 1px solid #e1e1e1;
-	.latest-container {
-		border-top: 5px solid #e1e1e1;
+.adventure-wrapper {
+	position: relative;
+	width: 30%;
+	p {
+		position: absolute;
+		top: 0;
+	}
+	a {
+		position: absolute;
+		top: 0;
 	}
 }
