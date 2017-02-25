@@ -38,7 +38,9 @@
         <div class="newsfeed-container">
             <h2 class="home-titles">Inhabitent Journal</h2>
             <div class="newsfeed-wrapper">
-                <?php global $post; $args=array( 'posts_per_page'=> 3, 'order'=> 'DSC', 'orderby' => 'post_date' ); $postslist = get_posts( $args ); foreach ( $postslist as $post ) : setup_postdata( $post ); ?>
+                <?php $args=array( 'posts_per_page'=> 3, 'order'=> 'DSC', 'orderby' => 'post_datgulpe' ); 
+                $postslist = get_posts( $args ); 
+                foreach ( $postslist as $post ) : setup_postdata( $post ); ?>
                 <div class="latest-wrapper">
                     <div class="product-picture">
                         <?php if ( has_post_thumbnail() ) : ?>
@@ -46,8 +48,9 @@
                         <?php endif; ?>
                     </div>
                     <div class="latest-container">
-                        <?php the_date(); ?>
+                        <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
                         <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                        <a href='<?php echo get_permalink($post);?>'>Read Entry</a>
                     </div>
                 </div>
                 <!-- .latest-wrapper -->
@@ -58,6 +61,7 @@
         </div>
         <!-- .newsfeed-container -->
 
+        <!-- ADVENTURES PANEL -->
         <?php $adventures = get_posts(array( 'post_type' => 'adventures', 'order' => 'ASC' )); ?>
         <h2>Latest Adventures</h2>
         <div class="adventure-container">
@@ -68,6 +72,7 @@
         <a href='<?php echo get_permalink($adventure);?>'>Read More</a>
         </div>
         <?php endforeach; ?>
+        <a href='<?php echo get_post_type_archive_link('adventures');?>'>More Adventures</a>
         </div>
  
     </main>

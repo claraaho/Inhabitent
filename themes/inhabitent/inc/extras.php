@@ -57,6 +57,18 @@ function product_archive_title($title) {
 add_filter('get_the_archive_title', 'product_archive_title');
 
 /**
+ * Removing 'Product Type' from products archive title.
+ */
+function product_archive_tag($title) {
+	if(is_tax()) {
+		$title = single_term_title('', false);
+	}
+	return $title;
+}
+add_filter('get_the_archive_title', 'product_archive_tag');
+
+
+/**
  * Customizable about hero image
  */
 function inhabitent_about_css() {
@@ -69,11 +81,6 @@ function inhabitent_about_css() {
 	if(!$image) {
 		return;
 	}
-
-	wp_enqueue_style(
-        'about-banner',
-        get_template_directory_uri() . '/sass/about.scss'
-    );
 
 	$hero_css = ".page-template-about .entry-header {
         background:

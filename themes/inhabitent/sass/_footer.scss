@@ -13,7 +13,9 @@
 	}
 	a {
 		color: #FFFFFF;
-		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	.site-info {
 	height: 285px;

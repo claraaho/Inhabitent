@@ -390,26 +390,26 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: none;
-  background: #248A83;
-  box-shadow: none;
-  color: white;
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
-  font-size: .9rem;
+  font-size: 0.75rem;
   line-height: 1;
-  padding: .75rem 1.5rem; }
-  button:hover,
+  padding: .6rem 1rem .4rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    background: #19625d; }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
+    border-color: #ccc #bbb #aaa;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+  input[type="button"]:active, input[type="button"]:focus,
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
@@ -422,29 +422,55 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #e1e1e1;
-  background-color: #f4f4f4; }
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f4f4f4; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
-  input[type="search"]:focus,
   textarea:focus {
     color: #111; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="password"] {
   padding: 3px; }
 
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+/*--------------------------------------------------------------
+# Search only
+--------------------------------------------------------------*/
+/* Buttons */
+button {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #248a83;
+  font-size: 1rem;
+  line-height: 1;
+  outline: none;
+  padding: 0; }
+
+/* Fields */
+input[type="search"] {
+  color: #666;
+  outline: none;
+  border-style: none; }
+  input[type="search"]:focus {
+    color: #111; }
+  input[type="search"]:active {
+    border-style: none; }
+
+input[type="search"] {
+  padding: 3px;
+  width: 12rem; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -465,7 +491,10 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   float: left;
   width: 100%; }
   .main-navigation ul {
@@ -540,6 +569,7 @@ a {
   z-index: 1; }
 
 .header-container {
+  width: 1120px;
   height: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -554,7 +584,11 @@ a {
     background-image: url(../../images/inhabitent-logo-tent.svg);
     background-size: 100%; }
   .header-container nav {
-    width: 370px; }
+    width: 525px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
   .header-container ul {
     display: -ms-flexbox;
     display: flex;
@@ -565,6 +599,15 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+
+.menu-menu-1-container {
+  width: 60%; }
+
+.search-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 16rem; }
 
 /*--------------------------------------------------------------
 # Front Homepage
@@ -653,6 +696,12 @@ a {
 
 .newsfeed-container .home-titles {
   text-align: center; }
+
+.home .fa {
+  color: #FFF; }
+
+.home .search-field {
+  background: transparent; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -961,7 +1010,7 @@ object {
         color: #f0e4d1; }
 
 /* About Page Only */
-.wpcf7-form .required {
+.wpcf7-form .required, .comment-form .required {
   color: #d99054; }
 
 /* Shop Page */
@@ -1057,8 +1106,9 @@ object {
     margin-bottom: 0.75rem;
     font-family: 'novecentosanswide', sans-serif; }
   .site-footer a {
-    color: #FFFFFF;
-    text-decoration: none; }
+    color: #FFFFFF; }
+    .site-footer a:hover {
+      text-decoration: underline; }
   .site-footer .site-info {
     height: 285px; }
     .site-footer .site-info .info-wrapper {

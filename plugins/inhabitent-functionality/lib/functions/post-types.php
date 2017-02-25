@@ -99,7 +99,6 @@ function inhabitent_adventures_post() {
 		'description'           => 'Post Type Description',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions'),
-		// 'taxonomies'            => array( 'adventure', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

@@ -11,6 +11,7 @@
 }
 
 .header-container {
+	width: 1120px;
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -23,7 +24,9 @@
 		background-size: 100%;
 	}
 	nav {
-		width: 370px;
+		width: 525px;
+		display: flex;
+		justify-content: space-between;
 	}
 	ul {
 		display: flex;
@@ -35,3 +38,24 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+
+.menu-menu-1-container {
+	width: 60%;
+}
+
+.search-form fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 16rem;
+	// .search-submit {
+	// 	color: #248a83;
+	// 	padding: 0;
+	// 	background: transparent;
+	// 	font-size: 1rem;
+	// 	outline: none;
+	// }
+	
+}
+

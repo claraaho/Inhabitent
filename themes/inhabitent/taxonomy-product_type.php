@@ -9,16 +9,31 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-		<?php the_post_thumbnail( 'large'); ?>
-		<h2><?php the_title(); ?></h2>
-		<p><?php echo CFS()->get('price'); ?></p> 
-		<?php the_content(); ?>
+		
+		<header class="page-header">
+			<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			?>
+		</header><!-- .page-header -->
 
 		
-		<?php endwhile; // End of the loop. ?>
+
+			<div class="shop-container">
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="product-wrapper">
+			<?php if ( has_post_thumbnail() ) : ?>
+            	<a href='<?php the_permalink();?>'><?php the_post_thumbnail('medium'); ?></a>
+        	<?php endif; ?>
+			
+
+			<div class="product-content">
+				<p><?php the_title(); ?></p>
+				<p><?php echo CFS()->get('price'); ?></p> 
+			</div><!-- .content-wrapper -->
+			</div><!-- .product-wrapper -->
+			<?php endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
