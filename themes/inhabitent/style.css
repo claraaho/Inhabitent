@@ -390,6 +390,7 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
+button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -404,12 +405,15 @@ input[type="submit"] {
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  input[type="button"]:active, input[type="button"]:focus,
+  button:active, button:focus,
+  input[type="button"]:active,
+  input[type="button"]:focus,
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
@@ -422,22 +426,24 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
+input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  background: #f4f4f4; }
+  border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
+  input[type="search"]:focus,
   textarea:focus {
     color: #111; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"] {
+input[type="password"],
+input[type="search"] {
   padding: 3px; }
 
 textarea {
@@ -448,7 +454,7 @@ textarea {
 # Search only
 --------------------------------------------------------------*/
 /* Buttons */
-button {
+.main-navigation button {
   border: none;
   background: transparent;
   box-shadow: none;
@@ -456,19 +462,21 @@ button {
   font-size: 1rem;
   line-height: 1;
   outline: none;
-  padding: 0; }
+  padding: 0;
+  text-shadow: none; }
 
 /* Fields */
-input[type="search"] {
+.main-navigation input[type="search"] {
   color: #666;
   outline: none;
-  border-style: none; }
-  input[type="search"]:focus {
+  border-style: none;
+  display: none; }
+  .main-navigation input[type="search"]:focus {
     color: #111; }
-  input[type="search"]:active {
+  .main-navigation input[type="search"]:active {
     border-style: none; }
 
-input[type="search"] {
+.main-navigation input[type="search"] {
   padding: 3px;
   width: 12rem; }
 
@@ -568,6 +576,18 @@ a {
   background: rgba(255, 255, 255, 0.85);
   z-index: 1; }
 
+.fixed-header {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1; }
+  .fixed-header .site-branding .logo {
+    background-image: url(../../images/inhabitent-logo-tent.svg); }
+  .fixed-header .main-navigation .search-form .fa {
+    color: #248a83; }
+
 .header-container {
   width: 1120px;
   height: 100%;
@@ -577,18 +597,17 @@ a {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  margin: 0 12rem; }
+  margin: 0 auto; }
   .header-container .logo {
     width: 53px;
     height: 34px;
     background-image: url(../../images/inhabitent-logo-tent.svg);
     background-size: 100%; }
   .header-container nav {
-    width: 525px;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
   .header-container ul {
     display: -ms-flexbox;
     display: flex;
@@ -601,13 +620,12 @@ a {
       justify-content: space-around; }
 
 .menu-menu-1-container {
-  width: 60%; }
+  width: 32%; }
 
 .search-form fieldset {
   margin: 0;
   padding: 0;
-  border: none;
-  width: 16rem; }
+  border: none; }
 
 /*--------------------------------------------------------------
 # Front Homepage
@@ -1059,7 +1077,8 @@ object {
   width: 100%;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding-top: 0; }
+  padding-top: 0;
+  margin-bottom: 0.75rem; }
   .page-id-9 .site-content .content-area {
     width: 1120px;
     margin: 0 auto; }
@@ -1074,10 +1093,14 @@ object {
 
 .about-content-wrapper {
   width: 800px;
-  margin: 3rem auto; }
+  margin: 3.5rem auto;
+  line-height: 1.75rem; }
   .about-content-wrapper h2 {
     text-align: center;
-    font-size: 2.1rem; }
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.25rem; }
 
 .adventure-container {
   display: -ms-flexbox;

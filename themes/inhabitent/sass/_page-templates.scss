@@ -176,6 +176,7 @@
     width: 100%;
     flex-direction: column;
     padding-top: 0;
+	margin-bottom: 0.75rem;
     .content-area {
         width: 1120px;
         margin: 0 auto;
@@ -194,10 +195,14 @@
 
 .about-content-wrapper {
 	width: 800px;
-	margin: 3rem auto;
+	margin: 3.5rem auto;
+	line-height: 1.75rem;
 	h2 {
 		text-align: center;
 		font-size: 2.1rem;
+		letter-spacing: 2px;
+		margin-bottom: 1.5rem;
+		line-height: 1.25rem;
 	}
 }
 

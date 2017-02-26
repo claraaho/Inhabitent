@@ -2,6 +2,7 @@
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
+button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -30,11 +31,11 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
+input[type="search"],
 textarea {
     color: #666;
     border: 1px solid #ccc;
     border-radius: 3px;
-	background: #f4f4f4;
     &:focus {
         color: #111;
     }
@@ -42,7 +43,8 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"]{
+input[type="password"],
+input[type="search"] {
     padding: 3px;
 }
 textarea {
@@ -55,7 +57,7 @@ textarea {
 --------------------------------------------------------------*/
 
 /* Buttons */
-button{
+.main-navigation button{
 	border: none;
 	background: transparent;
     box-shadow: none;
@@ -64,14 +66,15 @@ button{
     line-height: 1;
     outline: none;
 	padding: 0;
+    text-shadow: none;
 }
 
 /* Fields */
-input[type="search"]{
+.main-navigation input[type="search"]{
 	color: #666;
 	outline: none;
 	border-style: none;
-
+	display: none;
 	&:focus {
 		color: #111;
 	}
@@ -80,8 +83,9 @@ input[type="search"]{
 	}
 }
 
-input[type="search"] {
+.main-navigation input[type="search"] {
 	padding: 3px;
 	width: 12rem;
 }
+
 
