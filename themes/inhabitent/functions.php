@@ -130,7 +130,7 @@ require get_template_directory() . '/inc/extras.php';
  * Shop products page -- setting posts to 16 and ASC order
  */
 function shop_products( $query ) {
-    if ( is_post_type_archive( 'products' ) ) {
+    if ( is_post_type_archive( 'products' )){
         $query->set( 'posts_per_page', 16 );
 		$query->set('orderby', 'name');
 		$query->set('order', 'ASC' );
@@ -138,6 +138,17 @@ function shop_products( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'shop_products' );
+
+/**
+ * Adventures archive page -- ASC order
+ */
+function adventure_posts( $query ) {
+    if ( is_post_type_archive( 'adventures' )){
+		$query->set('order', 'ASC' );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'adventure_posts' );
 
 /**
  * Shop products tax page -- setting posts to ASC order

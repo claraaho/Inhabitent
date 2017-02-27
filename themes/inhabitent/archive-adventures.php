@@ -19,13 +19,16 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+			<div class="archive-adventure-container">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
+			<div class="archive-adventure-wrapper">
+				<?php the_post_thumbnail(); ?>
+				<div class="test">
+					<p><?php the_title(); ?></p>
+					<a class="read-link" href='<?php echo get_permalink();?>'>Read More</a>
+				</div>
+			</div>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -35,7 +38,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

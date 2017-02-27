@@ -51,6 +51,8 @@ add_filter( 'login_headerurl', 'login_logo_url' );
 function product_archive_title($title) {
 	if(is_post_type_archive('products')) {
 		$title = 'Shop Stuff';
+	}elseif(is_post_type_archive('adventures')) {
+		$title = 'Latest Adventures';
 	}
 	return $title;
 }

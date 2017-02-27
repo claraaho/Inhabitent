@@ -11,12 +11,25 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
-		<?php the_post_thumbnail( 'large'); ?>
-		<h2><?php the_title(); ?></h2>
-		<p><?php echo CFS()->get('price'); ?></p> 
-		<?php the_content(); ?>
-
+		<div class="single-product-wrapper">
+			<?php the_post_thumbnail( 'large'); ?>
+			<div class="products-content">
+				<h2><?php the_title(); ?></h2>
+				<p class="product-price"><?php echo CFS()->get('price'); ?></p> 
+				<?php the_content(); ?>
+				<div class="media-container">
+					<button type="button" class="media-buttons">
+						<i class="fa fa-facebook" aria-hidden="true"></i>Like
+					</button>
+					<button type="button" class="media-buttons">
+						<i class="fa fa-twitter" aria-hidden="true"></i>Tweet
+					</button>
+					<button type="button" class="media-buttons">
+						<i class="fa fa-pinterest" aria-hidden="true"></i>Pin
+					</button>
+				</div>
+			</div>
+		</div>
 		
 		<?php endwhile; // End of the loop. ?>
 

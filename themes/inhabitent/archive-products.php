@@ -17,13 +17,15 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
-			<?php $items=get_terms( array( 'taxonomy'=> 'product_type', 'orderby' => 'name'));?>
-			<?php foreach ( $items as $item ): ?>
+				<div class="archive-links">
+				<?php $items=get_terms( array( 'taxonomy'=> 'product_type', 'orderby' => 'name'));?>
+				<?php foreach ( $items as $item ): ?>
                 <?php $url = get_term_link($item->slug, 'product_type');?> 
                     <a href='<?php echo $url?>'><?php echo $item->name ?></a>
                 <?php endforeach; ?>
-
+				</div>
+			</header><!-- .page-header -->
+			
 			<div class="shop-container">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -34,7 +36,7 @@ get_header(); ?>
 			
 
 			<div class="product-content">
-				<p><?php the_title(); ?></p>
+				<div><p class="test"><?php the_title(); ?></p></div>
 				<p><?php echo CFS()->get('price'); ?></p> 
 			</div><!-- .content-wrapper -->
 			</div><!-- .product-wrapper -->

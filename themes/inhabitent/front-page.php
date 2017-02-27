@@ -6,11 +6,7 @@
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <?php while ( have_posts() ) : the_post(); ?>
-
-        <?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-        <?php endwhile; // End of the loop. ?>
+        
 
         <!-- PRODUCTS POSTS -->
         <?php $items=get_terms( array( 'taxonomy'=> 'product_type', 'orderby' => 'name'));?>
@@ -48,9 +44,9 @@
                         <?php endif; ?>
                     </div>
                     <div class="latest-container">
-                        <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-                        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        <a href='<?php echo get_permalink($post);?>'>Read Entry</a>
+                        <span><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></span>
+                        <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+                        <a class="read-link" href='<?php echo get_permalink($post);?>'>Read Entry</a>
                     </div>
                 </div>
                 <!-- .latest-wrapper -->
@@ -63,18 +59,19 @@
 
         <!-- ADVENTURES PANEL -->
         <?php $adventures = get_posts(array( 'post_type' => 'adventures', 'order' => 'ASC' )); ?>
-        <h2>Latest Adventures</h2>
-        <div class="adventure-container">
-        <?php foreach ( $adventures as $adventure ): ?>
-        <div class="adventure-wrapper">
-        <img src="<?php echo get_the_post_thumbnail_url($adventure); ?>">
-        <p><?php echo get_the_title($adventure); ?></p>
-        <a href='<?php echo get_permalink($adventure);?>'>Read More</a>
+        <h2 class="home-titles">Latest Adventures</h2>
+        <div class="adventure-container clearfix">
+            <?php foreach ( $adventures as $adventure ): ?>
+                <div class="adventure-wrapper">
+                    <img src="<?php echo get_the_post_thumbnail_url($adventure); ?>">
+                    <p><?php echo get_the_title($adventure); ?></p>
+                    <a href='<?php echo get_permalink($adventure);?>'>Read More</a>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-        <a href='<?php echo get_post_type_archive_link('adventures');?>'>More Adventures</a>
+        <div class="adventures-link-container">
+            <a class="adventures-link" href='<?php echo get_post_type_archive_link('adventures');?>'>More Adventures</a>
         </div>
- 
     </main>
     <!-- #main -->
 </div>

@@ -1,0 +1,58 @@
+.archive {
+    .page-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        border-bottom: 1px dashed #c8c8c8;
+        h1 {
+            font-size: 2.4rem;
+            letter-spacing: 2px;
+        }
+        .archive-links {
+            margin-bottom: 3rem;
+            font-family: 'novecentosanswide', sans-serif;
+            font-size: 1.2rem;
+            a {
+                margin: 0 1.5rem;
+            }
+        }
+        .taxonomy-description {
+            margin-bottom: 3rem;
+        }
+    }
+    
+}   
+
+.archive-adventure-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .archive-adventure-wrapper {
+            width: 49%;
+            position: relative;
+            margin-bottom: 1.5rem;
+            .test {
+                position: absolute;
+                top: 0;
+            }
+            p {
+                font-size: 3rem;
+                top: 1rem;
+                color: #FFF;
+                margin: 4.5rem 1.5rem;
+            }
+            a {
+                border: 1px solid #FFF;
+                padding: 0.6rem 1.5rem;
+                font-family: 'novecentosanswide', sans-serif;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                color: #FFF;
+                margin: 2rem 1.5rem;
+                &:hover {
+                    border: 1px solid #248a83;
+                    background: #248a83;
+                    color: #FFF;
+                }
+            }
+        }
+    }
