@@ -29,7 +29,7 @@ get_header(); ?>
 			
 
 			<div class="product-content">
-				<p><?php the_title(); ?></p>
+				<div><p><?php the_title(); ?></p></div>
 				<p><?php echo CFS()->get('price'); ?></p> 
 			</div><!-- .content-wrapper -->
 			</div><!-- .product-wrapper -->

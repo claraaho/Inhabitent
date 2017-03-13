@@ -24,10 +24,8 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="archive-adventure-wrapper">
 				<?php the_post_thumbnail(); ?>
-				<div class="test">
-					<p><?php the_title(); ?></p>
-					<a class="read-link" href='<?php echo get_permalink();?>'>Read More</a>
-				</div>
+				<a class="adventure-title" href='<?php echo get_permalink($adventure);?>'><?php the_title(); ?></a>
+				<a class="read-link" href='<?php echo get_permalink();?>'>Read More</a>
 			</div>
 			<?php endwhile; ?>
 

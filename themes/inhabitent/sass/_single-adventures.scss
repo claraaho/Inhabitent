@@ -1,0 +1,44 @@
+.single-adventures .site-header {
+    @include fixed-white-header;
+}
+
+.single-adventures .site-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0;
+	margin-bottom: 0.75rem;
+    .content-area {
+        width: 1120px;
+        margin: 0 auto;
+        border: none;
+    }
+    .adventures-content-wrapper {
+        width: 800px;
+        margin: 0 auto;
+        line-height: 1.75rem;
+        .meta-data {
+            h2 {
+                font-size: 2.4rem;
+            }
+            p {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-family: 'Novecento Sans Web', sans-serif;
+            }
+        }
+    }
+}
+
+.single-adventures .media-container {
+    .media-buttons {
+        @include black-button-style;
+        i {
+            margin-right: 5px;
+        }
+        &:hover {
+            @include green-button-change;
+        }
+    }
+}
+
+

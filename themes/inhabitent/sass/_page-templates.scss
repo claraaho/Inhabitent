@@ -7,9 +7,9 @@
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	font-family: 'merriweather', serif;
+	font-family: 'Merriweather Web', serif;
 	h1, h2 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 	}
 	h2 {
@@ -17,7 +17,7 @@
 	}
 }
 
-.blog, .page-id-12, .single {
+.blog, .page-id-12, .single, .search {
 		.content-area {
 		width: 83%;
 		border-right: 1px solid #e1e1e1;
@@ -59,7 +59,7 @@
 		background-color: #248A83;
 		text-transform: uppercase;
 		padding: 0 1rem;
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		a {
 			color: #FFF;
 			&:hover {
@@ -75,7 +75,7 @@
     background: transparent;
     padding: .65rem 1.5rem;
     font-size: 0.9rem;
-    font-family: 'novecentosanswide', sans-serif;
+    font-family: 'Novecento Sans Web', sans-serif;
     text-transform: uppercase;
 	&:hover {
 		border: 1px solid #248A83;
@@ -85,7 +85,7 @@
 }
 
 .entry-footer {
-	font-family: 'novecentosanswide', sans-serif;
+	font-family: 'Novecento Sans Web', sans-serif;
 	text-transform: uppercase;
 	.cat-links {
 	margin-right: 2rem;
@@ -142,7 +142,7 @@
 	}
 }
 
-.page-id-12 {
+.page-id-12 .content-area {
 	h1 {
 		font-size: 2.4rem;
 		letter-spacing: 2px;
@@ -205,35 +205,8 @@
 	}
 }
 
-
 .page-id-9 .site-header {
-    position: absolute;
-    border-bottom: none;
-    background: none;
-    a, a:visited {
-        color: #FFF;
-    }
-    a:hover {
-        color: #f0e4d1;
-    }
-	.fa {
-		color: #FFF;
-		&:hover {
-			color: #f0e4d1;
-		}
-	}
-	.search-field {
-		background: transparent;
-		color: #FFF;
-		font-family: 'novecentosanswide', sans-serif;
-		&:focus {
-			color: #FFF;
-		}
-	}
-}
-
-.page-id-9 .logo {
-    background-image: url(../../images/inhabitent-logo-tent-white.svg);
+	@include fixed-white-header;
 }
 
 .page-id-9 .site-content {
@@ -314,13 +287,13 @@
 /* Comments form */
 .comment-respond {
 	h3 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		font-size: 1.8rem;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
 	label {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 	}
 	textarea {
@@ -346,7 +319,7 @@
 	}
 	.form-submit input{
 		width: initial;
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
     	text-transform: uppercase;
     	font-size: 0.9rem;
     	padding: .75rem 1.5rem;
@@ -365,12 +338,12 @@ textarea, input {
 		border-radius: 0;
     	background: #f4f4f4;
 		color: #666;
-		font-family: 'merriweather', serif;
+		font-family: 'Merriweather Web', serif;
 	}
 
 .wpcf7-form {
 	label {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 		font-size: 1.1rem;
 	}
@@ -378,7 +351,7 @@ textarea, input {
 		border-radius: 0;
 	}
 	.wpcf7-submit {
-	font-family: 'novecentosanswide', sans-serif;
+	font-family: 'Novecento Sans Web', sans-serif;
     	text-transform: uppercase;
     	font-size: 0.9rem;
     	padding: .75rem 1.5rem;
@@ -402,9 +375,9 @@ textarea, input {
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	font-family: 'merriweather', serif;
+	font-family: 'Merriweather Web', serif;
 	h1, h2 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 	}
 	h2 {
@@ -454,7 +427,7 @@ textarea, input {
 		background-color: #248A83;
 		text-transform: uppercase;
 		padding: 0 1rem;
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		a {
 			color: #FFF;
 			&:hover {
@@ -470,7 +443,7 @@ textarea, input {
     background: transparent;
     padding: .65rem 1.5rem;
     font-size: 0.9rem;
-    font-family: 'novecentosanswide', sans-serif;
+    font-family: 'Novecento Sans Web', sans-serif;
     text-transform: uppercase;
 	&:hover {
 		border: 1px solid #248A83;
@@ -491,9 +464,9 @@ textarea, input {
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	font-family: 'merriweather', serif;
+	font-family: 'Merriweather Web', serif;
 	h1, h2 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 	}
 	h2 {
@@ -543,7 +516,7 @@ textarea, input {
 		background-color: #248A83;
 		text-transform: uppercase;
 		padding: 0 1rem;
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		a {
 			color: #FFF;
 			&:hover {
@@ -559,7 +532,7 @@ textarea, input {
     background: transparent;
     padding: .65rem 1.5rem;
     font-size: 0.9rem;
-    font-family: 'novecentosanswide', sans-serif;
+    font-family: 'Novecento Sans Web', sans-serif;
     text-transform: uppercase;
 	&:hover {
 		border: 1px solid #248A83;
@@ -580,9 +553,9 @@ textarea, input {
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	font-family: 'merriweather', serif;
+	font-family: 'Merriweather Web', serif;
 	h1, h2 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 	}
 	h2 {
@@ -632,7 +605,7 @@ textarea, input {
 		background-color: #248A83;
 		text-transform: uppercase;
 		padding: 0 1rem;
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		a {
 			color: #FFF;
 			&:hover {
@@ -648,7 +621,7 @@ textarea, input {
     background: transparent;
     padding: .65rem 1.5rem;
     font-size: 0.9rem;
-    font-family: 'novecentosanswide', sans-serif;
+    font-family: 'Novecento Sans Web', sans-serif;
     text-transform: uppercase;
 	&:hover {
 		border: 1px solid #248A83;
@@ -670,9 +643,9 @@ textarea, input {
 	display: flex;
 	padding-top: 48px;
 	margin: 0 auto;
-	font-family: 'merriweather', serif;
+	font-family: 'Merriweather Web', serif;
 	h1, h2 {
-		font-family: 'novecentosanswide', sans-serif;
+		font-family: 'Novecento Sans Web', sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
@@ -701,3 +674,38 @@ textarea, input {
 }
 
 
+/* Search Page */
+.search {
+	.page-header {
+		border-bottom: 1px solid #e1e1e1;
+    	margin-bottom: 3rem;
+    	padding-bottom: 1rem;
+		h1 {
+			font-size: 2.4rem;
+		}
+	}
+	.entry-title {
+		font-size: 2.1rem;
+	}
+	.hentry {
+		margin-bottom: 4.5rem;
+	}
+	.read-more {
+		@include black-button-style;
+		&:hover {
+			@include green-button-change;
+		}
+	}
+	.page-numbers {
+		@include green-button-style;
+		padding: 0.35rem 0.8rem;
+		&:hover {
+			background: #2f1339;
+			border: 1px solid #2f1339;
+		}
+	}
+	.page-numbers.current {
+		background: grey;
+		border: 1px solid grey;
+	}
+}

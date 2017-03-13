@@ -59,7 +59,7 @@ function product_archive_title($title) {
 add_filter('get_the_archive_title', 'product_archive_title');
 
 /**
- * Removing 'Product Type' from products archive title.
+ * Removing 'Product Type' from products archive title and leaving tax.
  */
 function product_archive_tag($title) {
 	if(is_tax()) {

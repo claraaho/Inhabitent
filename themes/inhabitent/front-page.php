@@ -31,9 +31,8 @@
         <!-- .products-container -->
 
         <!-- JOURNAL POSTS -->
-        <div class="newsfeed-container">
-            <h2 class="home-titles">Inhabitent Journal</h2>
-            <div class="newsfeed-wrapper">
+        <h2 class="home-titles">Inhabitent Journal</h2>
+            <div class="newsfeed-container">
                 <?php $args=array( 'posts_per_page'=> 3, 'order'=> 'DSC', 'orderby' => 'post_datgulpe' ); 
                 $postslist = get_posts( $args ); 
                 foreach ( $postslist as $post ) : setup_postdata( $post ); ?>
@@ -50,12 +49,9 @@
                     </div>
                 </div>
                 <!-- .latest-wrapper -->
-
                 <?php endforeach; wp_reset_postdata(); ?>
             </div>
-            <!-- .newsfeed-wrapper -->
-        </div>
-        <!-- .newsfeed-container -->
+            <!-- .newsfeed-container -->
 
         <!-- ADVENTURES PANEL -->
         <?php $adventures = get_posts(array( 'post_type' => 'adventures', 'order' => 'ASC' )); ?>
@@ -64,7 +60,7 @@
             <?php foreach ( $adventures as $adventure ): ?>
                 <div class="adventure-wrapper">
                     <img src="<?php echo get_the_post_thumbnail_url($adventure); ?>">
-                    <p><?php echo get_the_title($adventure); ?></p>
+                    <a class="adventure-title" href='<?php echo get_permalink($adventure);?>'><?php echo get_the_title($adventure); ?></a>
                     <a href='<?php echo get_permalink($adventure);?>'>Read More</a>
                 </div>
             <?php endforeach; ?>

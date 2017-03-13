@@ -6,23 +6,31 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
 		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
+			<div class="adventure-picture">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+			<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+			<div class="adventures-content-wrapper">
+				<div class="meta-data">
+					<h2><?php the_title(); ?></h2>
+					<p>By <?php the_author(); ?></p>
+				</div>
+				<?php the_content(); ?>
+				<div class="media-container">
+					<button type="button" class="media-buttons">
+						<i class="fa fa-facebook" aria-hidden="true"></i>Like
+					</button>
+					<button type="button" class="media-buttons">
+						<i class="fa fa-twitter" aria-hidden="true"></i>Tweet
+					</button>
+					<button type="button" class="media-buttons">
+						<i class="fa fa-pinterest" aria-hidden="true"></i>Pin
+					</button>
+				</div>
+			</div>
+			
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
