@@ -33,7 +33,7 @@
         <!-- JOURNAL POSTS -->
         <h2 class="home-titles">Inhabitent Journal</h2>
             <div class="newsfeed-container">
-                <?php $args=array( 'posts_per_page'=> 3, 'order'=> 'DSC', 'orderby' => 'post_datgulpe' ); 
+                <?php $args=array( 'posts_per_page'=> 3, 'order'=> 'DSC', 'orderby' => 'post_date' ); 
                 $postslist = get_posts( $args ); 
                 foreach ( $postslist as $post ) : setup_postdata( $post ); ?>
                 <div class="latest-wrapper">
